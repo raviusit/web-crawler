@@ -6,7 +6,6 @@
 #
 # Author:    Ravi Maurya
 # Creation:  18 Jul, 2016
-#
 
 import re
 import urllib2
@@ -31,7 +30,6 @@ def isValidUrl(url):
         # matchlst =[]
         # for i in range(len(lst)):
         #     matchlst[i] = re.search(r'\b  \b',strs)
-
         # match1  = re.search(r'\btwitter\b',strs)
         # match2  = re.search(r'\bfacebook\b',strs)
         # match3  = re.search(r'\bgoogle\b',strs)
@@ -48,8 +46,8 @@ def isValidUrl(url):
         # match14 = re.search(r'\bdesignitmarcom\b',strs)
         # match15 = re.search(r'\baboutads\b',strs)
         # match16 = re.search(r'\bnetworkadvertising\b',strs)
+       
         match = re.search(r'\bwiprodigital\b',strs)
-
         if match:
                 # or match2 or match3 or match4 \
                 # or match5 or match6 or match7 or match8\
@@ -64,7 +62,7 @@ def crawler(SeedUrl):
     tocrawl=[SeedUrl]
     crawled=[]
     try:
-        print "Started Crawling : HTTPS://wiprodigital.com"
+        print "Started Crawling :: " + SeedUrl
         while tocrawl:
             page=tocrawl.pop()
             if page not in crawled:
